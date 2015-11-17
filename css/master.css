@@ -1,0 +1,240 @@
+
+
+* {
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+	margin:0 0;
+	padding:0 0;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+}
+
+body
+{
+	color:#FFF;
+	background-color:#000;
+	margin: 0 0;
+	padding: 0 0;
+    height:100%;
+}
+
+#screen
+{
+    background-color:#222;
+    min-height:780px;
+    height:100%;
+}
+
+#splash 
+{
+    position:absolute;
+    z-index:666;
+    background-image: url(../assets/SplashScreenImage.jpg);
+    width:100%;
+    height:100%;
+}
+
+#clrPicker
+{
+    display:none;
+    z-index:100;
+    left:20px;
+    right:20px;
+    position:absolute;
+    background-color:#111;
+    top:62px;
+    margin:0 auto;
+    padding:10px 10px;
+    border:solid 1px #333;
+}
+
+#clrPicker > div
+{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    min-height:48px;
+    display:inline-block;
+    margin:2px 2px;
+    padding:8px 8px;
+}
+
+#zoomBar 
+{
+
+   width:100%;
+    height:60px;
+    display:none;
+    margin:0 auto;
+    text-align: center;
+    position:absolute;
+    top:62px;
+    text-align:center;
+    z-index:12;
+}
+
+#zoomBar > div
+{
+    width:64px;
+    height:48px;
+    min-width:64px;
+    max-width: 64px;
+    min-height:48px;
+    line-height: 48px;
+    display:inline-block;
+    margin:2px auto;
+    padding:8px 8px;
+    border:solid 1px #333;
+    font-size: 48pt;
+    font-weight: bolder;
+    font-family: Arial;
+    background-color: #111;
+}
+
+#zoomVal 
+{
+    font-size: 32pt;
+    font-family: sans-serif;
+    letter-spacing: -0.05em; 
+    border:none;
+}
+
+#toolBar
+{
+	/*width:100%;*/
+    width:480px;
+    /*max-width:640px;*/
+	height:60px;
+	background-color: #333;
+    display:table;
+    margin:0 auto;
+    padding:0 0;
+}
+
+#toolBar div
+{
+    background-color:#99F;
+    border:solid 1px rgba(0,0,0,1.0);
+    margin:0 auto;
+    padding:4px 2px;
+    display:table-cell;
+    min-width:48px;
+    min-height:48px;
+    max-width:60px;
+
+    line-height:48px;
+    text-align:center;
+    background-repeat: no-repeat;
+    background-position:center center;
+
+    -webkit-transition:-webkit-transform 600ms ease-in-out;
+    transition:transform 600ms ease-in-out;
+}
+
+
+@-webkit-keyframes bounceInOut {
+  from {
+    -webkit-transform:scale(1);
+  }
+  50% {
+    -webkit-transform:scale(0.5);
+  }
+
+  to {
+    -webkit-transform:scale(1);
+  }
+}
+
+#toolBar.landscape div
+{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+/*    -webkit-animation-duration: 300ms;
+    -webkit-animation-name: bounceInOut;*/
+}
+
+#toolBar.portrait div
+{
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+
+#toolBtnMove
+{
+    background-image:url(../assets/48_move.png);
+}
+
+#toolBtnErase
+{
+    background-image:url(../assets/48_erase.png);
+}
+
+#toolBtnUndo 
+{
+    background-image:url(../assets/48_undo2.png);
+}
+
+#toolBtnColor
+{
+    background-image:url(../assets/48_themes.png);
+}
+
+#toolBtnDraw
+{
+    background-image:url(../assets/48_edit.png);
+}
+
+#toolBtnSettings
+{
+    background-image:url(../assets/48_settings.png);
+}
+
+#toolBtnExport
+{
+    background-image:url(../assets/48_upload.png);
+}
+
+#toolBtnZoom 
+{
+    background-image:url(../assets/48_search.png);
+}
+
+#toolBtnDelete
+{
+    background-image:url(../assets/48_close.png);
+}
+
+#toolBtnSave
+{
+    background-image:url(../assets/48_save.png);
+}
+
+#container
+{
+	background-color:#004;
+	margin:0 auto;
+	padding:0 0;
+    width:480px;
+    height:580px;
+    overflow:hidden;
+}
+
+#content
+{
+    margin:0 auto;
+    -webkit-transform-origin: 0 0;
+    position:relative;
+    width:480px;
+    height:580px;
+}
